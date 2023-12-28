@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+.container nav{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 10px;
+}
