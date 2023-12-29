@@ -3,13 +3,129 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .container{
     max-width: 1140px;
     margin: auto;
+    color: var(--text);
+} 
+:root{
+    --l-primary: #550a46d2;
+    --primary:#550A46;
+    --contrast:#bbc0c4;
+    --l-bg: #f1e5df;
+    --bg: #e9e9e9;
+    --text: #545454;
+    --allura: 'Allura';
 }
+
+/* COMMAN PROPERTIES */
+.allura{
+    font-family: var(--allura);
+    font-size: 30px;
+    color: var(--primary);
+}
+.f-5{
+    font-size: 50px;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.center{
+    text-align: center;
+}
+.btn{
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    border: none;
+}
+.btn:hover{
+    background-color: var(--l-primary);
+}
+img{
+    width: 100%;
+}
+.p-100{
+    padding: 100px 0;
+}
+.w-50{
+    width: 50%;
+}
+
+
+
+
+
+/* NAVBAR  */
 .container nav{
     display: flex;
     justify-content: space-evenly;
-    padding: 20px 10px;
+    align-items: center;
+    padding: 10px;
+    margin-top: 15px;
+}
+.navbar{
+    text-decoration: none;
+    color: #545454;
+    padding: 10px;
+    z-index: 1;
+    position: relative;
+    transition: 0.3s;
+}
+.navbar::before{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--primary);
+    border-radius: 8px 8px 0 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+.navbar:hover::before{
+    opacity: 1;
+    bottom: 0;
+}
+.nav-in{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    transition: 0.3s;
+    z-index: 1;
+    border-radius: 8px 8px 0 0;
+}
+.nav{
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+    background-color: var(--bg);
+    max-width: 100%;
+    border-radius: 40px;
+    box-shadow: 0 8px 20px rgba(159, 162, 177, 0.499);
+}
+@media (max-width:580px) {
+    .nav{
+        overflow: auto;
+    }
+}
+
+
+
+
+/* ERROR PAGE  */
+.err h3{
+    padding: 10px 0;
+}
+.err h5{
+    padding: 8px 0;
+}
+.err .btn{
+    margin-top: 15px;
 }
