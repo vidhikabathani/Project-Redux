@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: var(--bg);
+}
 .container{
     max-width: 1140px;
     margin: auto;
@@ -41,6 +44,7 @@
     border-radius: 20px;
     transition: 0.3s;
     border: none;
+    cursor: pointer;
 }
 .btn:hover{
     background-color: var(--l-primary);

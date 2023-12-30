@@ -1,0 +1,24 @@
+
+/* SIGNUP PAGE  */
+.sign_up input{
+    padding: 8px 12px;
+    border-color: var(--primary);
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.sign_up{
+    background-color: var(--bg);
+}
+.sign_up button{
+    margin: 10px 0;
+}
+.sign_up fieldset{
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    border: none;
+    justify-content: center;
+    height: 450px;
+    margin: auto;
+    width: 800px;
+}
