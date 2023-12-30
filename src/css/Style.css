@@ -1,10 +1,13 @@
 
 /* SIGNUP PAGE  */
-.sign_up input{
+input{
     padding: 8px 12px;
     border-color: var(--primary);
     border-radius: 8px;
     margin: 10px 0;
+}
+.sign_up h3{
+    padding: 10px 0;
 }
 .sign_up{
     background-color: var(--bg);
@@ -12,13 +15,41 @@
 .sign_up button{
     margin: 10px 0;
 }
-.sign_up fieldset{
-    display: flex;
-    align-items: center;
-    border-radius: 30px;
-    border: none;
+fieldset{
     justify-content: center;
-    height: 450px;
+    height: 480px;
     margin: auto;
-    width: 800px;
+    border: none;
+    box-shadow: 0 8px 40px rgba(159, 162, 177, 0.499);
+    width: 900px;
+    border-radius: 10px;
+}
+
+
+
+
+
+/* LOGIN PAGE  */
+.bg_primary{
+    border-radius: 0 10px 10px 0;
+    background-color: var(--primary);
+    color: white;
+    height: 480px;
+}
+.bg_primary h1{
+    padding: 50px 0 15px 0;
+}
+.bg_primary button{
+    margin: 15px 0;
+    padding: 8px 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    color: var(--primary);
+    border-radius: 20px;
+}
+.bg_primary button:hover{
+    color: white;
+    background-color: var(--l-primary);
 }
