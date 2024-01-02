@@ -1,10 +1,11 @@
-import { combineReducers, legacy_createStore } from "redux";
+import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
 import UserReducer from "./reducers/UserReducer";
 import { ProductReducer } from "./reducers/ProductReducer";
+import { thunk } from "redux-thunk";
 
 const Combine = combineReducers({
     UserReducer: UserReducer,
     ProductReducer:ProductReducer
 })
 
-export const Store = legacy_createStore(Combine, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+export const Store = legacy_createStore(Combine, applyMiddleware(thunk))

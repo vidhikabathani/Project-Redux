@@ -1,4 +1,5 @@
 // USERS
+import axios from "axios"
 import { LOGIN, LOGOUT, PRODUCT, SIGNUP } from "./ActionType"
 
 export const Signup=(data)=>{
@@ -23,9 +24,11 @@ export const Logout=()=>{
 
 
 // PRODUCT
-export const Product=(data)=>{
-    return{
+export const Product=(data)=>async(dispatch)=>{
+    let products = await axios.post("http://localhost:3100/products", data)
+
+    dispatch({
         type:PRODUCT,
-        payload:data
-    }
+        payload:products
+    })
 }

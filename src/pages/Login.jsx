@@ -30,7 +30,7 @@ function Loginn() {
                 <fieldset>
                     <div className="flex align_center">
                         <div className='w-50'>
-                            <h2>Welcom Back!</h2>
+                            <h2>Welcome Back!</h2>
                             <h3>Login </h3>
                             <form action="" onSubmit={handleSubmit}>
                                 <input type="email" placeholder='Enter Email' value={email} onChange={(e) => { setEmail(e.target.value) }} /><br />
