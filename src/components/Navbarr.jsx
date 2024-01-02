@@ -17,7 +17,7 @@ function Navbarr() {
                     <NavLink to='/cart' className="navbar">Cart</NavLink>
                     <NavLink to='/signup' className="navbar">SignUp</NavLink>
                     <NavLink to='/login' className="navbar">Login</NavLink>
-                    {/* {data.isLogin ? <span>Logout</span> : <NavLink to='/login' className="navbar">Login</NavLink>} */}
+                    {/* {data.isLogin ? (<span>Logout</span>) : <NavLink to='/login' className="navbar">Login</NavLink>} */}
                     <span className='nav-in'></span>
                 </nav>
             </div>

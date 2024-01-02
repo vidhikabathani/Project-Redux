@@ -1,8 +1,14 @@
 import React from 'react'
+import AddProduct from './AddProduct'
 
 function Product() {
     return (
-        <div>Product</div>
+        <div>
+            <AddProduct />
+            <div>
+                products
+            </div>
+        </div>
     )
 }
 

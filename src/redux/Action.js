@@ -1,5 +1,5 @@
 // USERS
-import { LOGIN, LOGOUT, SIGNUP } from "./ActionType"
+import { LOGIN, LOGOUT, PRODUCT, SIGNUP } from "./ActionType"
 
 export const Signup=(data)=>{
     return{
@@ -18,5 +18,14 @@ export const Login=(data)=>{
 export const Logout=()=>{
     return{
         type:LOGOUT
+    }
+}
+
+
+// PRODUCT
+export const Product=(data)=>{
+    return{
+        type:PRODUCT,
+        payload:data
     }
 }
