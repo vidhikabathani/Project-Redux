@@ -11,11 +11,6 @@ function AddProduct() {
 
     let dispatch=useDispatch()
 
-    // const handlepost = async (data) => {
-    //     let products = await axios.post("http://localhost:3100/products", data)
-    //     dispatch(Product(products.data))
-    // }
-
     const handleSubmit = (e) => {
         e.preventDefault();
         let products = {

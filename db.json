@@ -21,6 +21,13 @@
       "price": "1200",
       "category": "Men",
       "id": 2
+    },
+    {
+      "title": "Black T-shirt",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm2ntUJXL_h9_Hz9faO_fws7S5irUOlRjx7pO7PUJbdbVZDher9VZEVYb60X3goxP4PyY&usqp=CAU",
+      "price": "1800",
+      "category": "Men",
+      "id": 3
     }
   ]
 }

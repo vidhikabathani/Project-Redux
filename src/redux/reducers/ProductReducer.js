@@ -1,4 +1,4 @@
-import { PRODUCT } from '../ActionType';
+import { ADD_PRODUCT, GET_PRODUCTS } from '../ActionType';
 
 const initial={
     product:[]
@@ -6,10 +6,16 @@ const initial={
 
 export const ProductReducer=(state=initial,{type,payload})=> {
     switch (type) {
-        case PRODUCT:
+        case ADD_PRODUCT:
             return{
                 ...state,
                 product:[...state.product,payload]
+            }
+
+        case GET_PRODUCTS:
+            return{
+                ...state,
+                product:payload
             }
     
         default:
