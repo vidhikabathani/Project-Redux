@@ -1,6 +1,6 @@
 // USERS
 import axios from "axios"
-import { ADD_PRODUCT, GET_PRODUCTS, LOGIN, LOGOUT, SIGNUP } from "./ActionType"
+import { ADD_PRODUCT, GET_PRODUCTS, LOGIN, LOGOUT, SIGNUP, SINGLE_PRODUCT, SINGLE_PRODUCTS } from "./ActionType"
 
 export const Signup=(data)=>{
     return{
@@ -38,6 +38,15 @@ export const Getproduct=()=>async(dispatch)=>{
 
     dispatch({
         type:GET_PRODUCTS,
+        payload:get
+    })
+}
+
+export const Singleproduct=(id)=>async(dispatch)=>{
+    let get=await axios.get(`http://localhost:3100/products/${id}`)
+
+    dispatch({
+        type:SINGLE_PRODUCT,
         payload:get
     })
 }

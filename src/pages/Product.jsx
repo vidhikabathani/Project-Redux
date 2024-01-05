@@ -5,7 +5,7 @@ import { Getproduct } from '../redux/Action'
 function Product() {
 
     let dispatch = useDispatch()
-    let { data } = useSelector(store => store.ProductReducer.product)
+    let {data} = useSelector(store => store.ProductReducer.product)
 
     useEffect(() => {
         dispatch(Getproduct())
@@ -14,12 +14,14 @@ function Product() {
     return (
         <div>
             {
-                data.map((e) => {
-                    return <div>
-                        <h3>{e.title}</h3>
-                        <img src={e.img} alt="" />
-                        <h5>Rs. {e.price}</h5>
-                    </div>
+                data.map((ele) => {
+                    return (<div className=' flex main-div'>
+                        <div>
+                        <img src={ele.url} alt="" />
+                        <h3>{ele.title}</h3>
+                        <h5>Rs. {ele.price}</h5>
+                        </div>
+                    </div>)
                 })
             }
         </div>

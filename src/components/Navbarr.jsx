@@ -1,12 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import '../css/Navbar.css'
 import '../css/stylesheet.css'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import '../css/Navbar.css'
+import { Logout } from '../redux/Action'
 
 function Navbarr() {
 
     let data = useSelector((store) => store.UserReducer)
+    let dispatch=useDispatch()
+
     console.log(data);
     return (
         <div>
@@ -19,7 +22,7 @@ function Navbarr() {
                     <NavLink to='/cart' className="navbar">Cart</NavLink>
                     <NavLink to='/signup' className="navbar">SignUp</NavLink>
                     {/* {data.isLogin ? (<span className='navbar'>{data.userdata.username}</span>) : <NavLink to='/signup' className="navbar">SignUp</NavLink>} */}
-                    {data.isLogin ? (<span className='navbar'>Logout</span>) : <NavLink to='/login' className="navbar">Login</NavLink>}
+                    {data.isLogin ? (<span className='navbar' onClick={()=>dispatch(Logout())}>Logout</span>) : <NavLink to='/login' className="navbar">Login</NavLink>}
                     <span className='nav-in'></span>
                 </nav>
             </div>

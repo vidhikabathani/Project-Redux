@@ -53,3 +53,10 @@ fieldset{
     color: white;
     background-color: var(--l-primary);
 }
+
+
+
+/* PRODUCT PAGE */
+.main-div{
+    display: flex;
+}
