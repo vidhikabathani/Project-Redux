@@ -26,7 +26,7 @@ function Loginn() {
 
     return (
         <div className='p-100 login'>
-            <div className="container center">
+            <div className="container pt-100 center">
                 <fieldset>
                     <div className="flex align_center">
                         <div className='w-50'>
@@ -35,7 +35,7 @@ function Loginn() {
                             <form action="" onSubmit={handleSubmit}>
                                 <input type="email" placeholder='Enter Email' value={email} onChange={(e) => { setEmail(e.target.value) }} /><br />
                                 <input type="password" placeholder='Enter password' value={password} onChange={(e) => { setPassword(e.target.value) }} /><br />
-                                <button className='btn' onClick={handleSubmit}> Login</button><br />
+                                <button id='btn' onClick={handleSubmit}> Login</button><br />
                             </form>
                         </div>
                         <div className='w-50 bg_primary p-100'>

@@ -1,7 +1,10 @@
-// USERS
 import axios from "axios"
-import { ADD_PRODUCT, GET_PRODUCTS, LOGIN, LOGOUT, SIGNUP, SINGLE_PRODUCT, SINGLE_PRODUCTS } from "./ActionType"
+import { ADD_CART, ADD_PRODUCT, GET_CART, GET_PRODUCTS, LOGIN, LOGOUT, REMOVE_CART, SIGNUP, SINGLE_PRODUCT } from "./ActionType"
 
+
+
+
+// USERS
 export const Signup=(data)=>{
     return{
         type: SIGNUP,
@@ -23,13 +26,15 @@ export const Logout=()=>{
 }
 
 
+
+
 // PRODUCT
 export const Product=(data)=>async(dispatch)=>{
     let products = await axios.post("http://localhost:3100/products", data)
 
     dispatch({
         type:ADD_PRODUCT,
-        payload:products
+        payload:products.data
     })
 }
 
@@ -38,15 +43,45 @@ export const Getproduct=()=>async(dispatch)=>{
 
     dispatch({
         type:GET_PRODUCTS,
-        payload:get
+        payload:get.data
     })
 }
 
 export const Singleproduct=(id)=>async(dispatch)=>{
-    let get=await axios.get(`http://localhost:3100/products/${id}`)
+    let singlep=await axios.get(`http://localhost:3100/products/${id}`)
 
     dispatch({
         type:SINGLE_PRODUCT,
-        payload:get
+        payload:singlep.data
+    })
+}
+
+
+
+// CART 
+export const AddCart=(data)=>async(dispatch)=>{
+    let res=await axios.post("http://localhost:3100/cart",data)
+
+    dispatch({
+        type:ADD_CART,
+        payload:res.data
+    })
+}
+
+export const GetCart=()=>async(dispatch)=>{
+    let res=await axios.get("http://localhost:3100/cart")
+
+    dispatch({
+        type:GET_CART,
+        payload:res.data
+    })
+}
+
+export const removeCart=(id)=>async(dispatch)=>{
+    let res=await axios.get(`http://localhost:3100/cart/${id}`)
+
+    dispatch({
+        type:REMOVE_CART,
+        payload:id
     })
 }

@@ -29,7 +29,7 @@ function Signupp() {
 
     return (
         <div className='p-100 sign_up'>
-            <div className="container center">
+            <div className="container pt-100 center">
                 <fieldset>
                     <div className="flex align_center">
                         <div className='w-50'>
@@ -39,7 +39,7 @@ function Signupp() {
                                 <input type="text" placeholder='Enter Uername' value={username} onChange={(e) => { setUsername(e.target.value) }} /><br />
                                 <input type="email" placeholder='Enter Email' value={email} onChange={(e) => { setEmail(e.target.value) }} /><br />
                                 <input type="password" placeholder='Enter password' value={password} onChange={(e) => { setPassword(e.target.value) }} /><br />
-                                <button className='btn' onClick={handleSubmit}> SignUp</button><br />
+                                <button id='btn' onClick={handleSubmit}> SignUp</button><br />
                             </form>
                         </div>
                         <div className='w-50 bg_primary p-100'>

@@ -7,6 +7,7 @@ import Signup from '../pages/Signup'
 import Login from '../pages/Login'
 import Error from '../pages/Error'
 import AddProduct from '../pages/AddProduct'
+import SinglePage from '../pages/SinglePage'
 
 function AllRouter() {
     return (
@@ -18,7 +19,7 @@ function AllRouter() {
             <Route path='/signup' element={<Signup/>}></Route>
             <Route path='/login' element={<Login/>}></Route>
             <Route path='/*' element={<Error/>}></Route>
-            <Route path='/product/:id'></Route>
+            <Route path='/product/:id' element={<SinglePage/>}></Route>
         </Routes>
     )
 }

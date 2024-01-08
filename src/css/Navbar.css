@@ -25,9 +25,16 @@ body{
 
 
 /* COMMAN PROPERTIES */
+.f-blue{
+    color: var(--primary);
+}
 .allura{
     font-family: var(--allura);
     font-size: 30px;
+}
+.col-4{
+    max-width: 19%;
+    margin: 5px;
 }
 .f_primary{
     color: var(--primary);
@@ -39,13 +46,19 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
+.pt-100{
+    padding-top: 60px;
+}
+.justify-between{
+    justify-content: space-between;
+}
 .align_center{
     align-items: center;
 }
 .center{
     text-align: center;
 }
-.btn{
+#btn{
     background-color: var(--primary);
     text-decoration: none;
     color: white;
@@ -127,6 +140,13 @@ img{
     .nav{
         overflow: auto;
     }
+}
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
 
 

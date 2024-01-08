@@ -58,5 +58,32 @@ fieldset{
 
 /* PRODUCT PAGE */
 .main-div{
-    display: flex;
+    border: 1px solid var(--primary);
+}
+
+
+
+
+
+
+
+/* HOME PAGE */
+.banner{
+    position: relative;
+    background-image: url('https://preview.colorlib.com/theme/cozastore/images/slide-02.jpg.webp');
+    height: 100vh;
+}
+.home-banner{
+    position: absolute;
+    bottom: 250px;
+    left: 300px;
+    font-size: 25px;
+}
+.home-banner p{
+    font-size: 15px;
+    padding: 10px 0;
+}
+.color-layer{
+    background-color: rgba(0, 0, 0, 0.163);
+    height: 100vh;
 }

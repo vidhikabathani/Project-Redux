@@ -2,17 +2,16 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import '../css/stylesheet.css'
 import { useDispatch, useSelector } from 'react-redux'
-import '../css/Navbar.css'
 import { Logout } from '../redux/Action'
+import '../css/Navbar.css'
 
 function Navbarr() {
 
     let data = useSelector((store) => store.UserReducer)
     let dispatch=useDispatch()
 
-    console.log(data);
     return (
-        <div>
+        <div className='header'>
             <div className="container">
                 <nav className='nav'>
                     <h1 className='allura f_primary'>EBuy</h1>
