@@ -9,7 +9,7 @@ input{
 .sign_up h3{
     padding: 10px 0;
 }
-.sign_up{
+body{
     background-color: var(--bg);
 }
 .sign_up button{
@@ -74,12 +74,11 @@ fieldset{
     height: 100vh;
 }
 .home-banner{
-    position: absolute;
-    bottom: 250px;
-    left: 300px;
+    padding-left: 200px;
+    padding-top: 250px;
     font-size: 25px;
 }
-.home-banner p{
+.home-banner p,button{
     font-size: 15px;
     padding: 10px 0;
 }

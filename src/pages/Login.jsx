@@ -11,7 +11,7 @@ function Loginn() {
 
     const handleLogin = async (email, password) => {
         let user = await axios.get(`http://localhost:3100/users?email=${email}&password=${password}`)
-        dispatch(Login(user.data))
+        dispatch(Login(...user.data))
     }
     
     const handleSubmit = (e) => {
